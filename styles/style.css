@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+* {
+  font-family: "JetBrains Mono";
+}
+
+nav {
+  background: black;
+  min-width: 20%;
+  position: fixed;
+  right: 0;
+  padding: 8px;
+}
+nav > h3 {
+  margin-left: 16px;
+  margin-right: 16px;
+  text-align: center;
+  color: white;
+  padding-bottom: 16px;
+  border-bottom: 4px white dashed;
+}
+nav > ul {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+nav > ul > li {
+  list-style-type: decimal;
+}
+nav > ul > li:hover, nav > ul > li.active {
+  color: red;
+}
+
+.nav-button {
+  display: none;
+}
+
+.nav-button-close-menu {
+  display: none;
+}
+
+.info {
+  transition: all 0.25s ease-in-out;
+  display: block;
+  padding: 16px;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 25%;
+  background: black;
+  color: white;
+}
+.info > .close-btn {
+  width: 48px;
+  height: 48px;
+  float: right;
+  margin-bottom: 16px;
+}
+.info > .close-btn > img {
+  width: 100%;
+  height: 100%;
+}
+.info > .close-btn:hover {
+  cursor: pointer;
+}
+.info > .close-btn > .line {
+  background: white;
+  height: 4px;
+  border-radius: 2px;
+  width: 36px;
+  transform: rotate(45deg) translateY(13px) translateX(21px);
+}
+.info > .close-btn > .line:before {
+  border-radius: 2px;
+  display: block;
+  content: "";
+  background: white;
+  height: 4px;
+  width: 36px;
+  transform: rotate(90deg);
+}
+.info.active {
+  display: block;
+  box-shadow: 0 0 16px black;
+}
+.info > img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 1440px) {
+  nav > h3 {
+    font-size: 1rem;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-bottom: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .info {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  nav {
+    padding-top: 94px;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 0.25s ease-in-out;
+  }
+  nav > h3 {
+    font-size: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 16px;
+  }
+  nav.active {
+    transform: translateX(0);
+  }
+  .nav-button, .nav-button-close-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: black;
+    right: 0;
+    position: fixed;
+    margin: 16px;
+    transition: all 0.25s ease-in-out;
+  }
+  .nav-button > img, .nav-button-close-menu > img {
+    width: 50%;
+    height: 50%;
+  }
+  .nav-button.menu-active {
+    display: none;
+  }
+  .nav-button-close-menu {
+    display: none;
+    background: white;
+  }
+  .nav-button-close-menu img {
+    width: 100%;
+    height: 100%;
+  }
+  .nav-button-close-menu.menu-active {
+    display: flex;
+  }
+  .info {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
