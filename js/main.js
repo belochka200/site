@@ -8,6 +8,11 @@ const animationTime = 250
 
 closeAllInfoBlocks()
 
+// Функционал для экскурсии
+// document.querySelector('.map').addEventListener("click", () => {
+//   changeMenuVisible()
+// })
+
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", () => {
     closeAllInfoBlocks()

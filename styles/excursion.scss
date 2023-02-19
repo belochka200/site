@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+* {
+    font-family: "JetBrains Mono";
+}
+body {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button.button-start {
+    margin-top: 96px;
+    width: 80vw;
+    background: rgba($color: #ffffff, $alpha: .1);
+    padding: 16px;
+    border-radius: 16px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.button {
+    background: white;
+    color: black;
+    padding: 16px;
+    border-radius: 16px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #ffffff, $alpha: .1);
+    padding: 16px;
+    border-radius: 16px;
+    .quote {
+        font-size: 18px;
+        font-style: italic;
+    }
+    img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 16px;
+        height: auto;
+    }
+}
+
+img {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 1s ease-in-out;
+    &:hover {
+        scale: .98;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .button {
+        width: 100%;
+    }
+    img {
+        height: 300px;
+        &:hover {
+            scale: 1;
+        }
+    }
+    .slider {
+        flex-direction: column;
+        div {
+            width: 80%;
+        }
+        img {
+            margin-top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .quote {
+            margin-top: 16px;
+            font-size: 18px;
+            font-style: italic;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .slider {
+        div {
+            width: 100%;
+        }
+    }
+}

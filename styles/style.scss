@@ -4,6 +4,15 @@
     font-family: "JetBrains Mono";
 }
 
+// body {
+//     background: url('../images/map.png');
+//     height: 100vh;
+//     width: 100vw;
+//     background-repeat: no-repeat;
+//     object-position: center;
+//     object-fit: cover;
+// }
+
 nav {
     background: black;
     min-width: 20%;
@@ -29,6 +38,22 @@ nav {
                 color: red;
             }
         }
+    }
+    a {
+        text-decoration: none;
+    }
+    .excursion-button {
+        background: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        margin: 16px;
+        width: calc(100% - 32px);
+        padding: 8px;
+        cursor: pointer;
+        // text-decoration: none;
     }
 }
 
