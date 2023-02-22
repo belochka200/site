@@ -4,14 +4,15 @@
     font-family: "JetBrains Mono";
 }
 
-// body {
-//     background: url('../images/map.png');
-//     height: 100vh;
-//     width: 100vw;
-//     background-repeat: no-repeat;
-//     object-position: center;
-//     object-fit: cover;
-// }
+body {
+    overflow: hidden;
+    background: #525452;
+}
+
+.map {
+    width: 100vw;
+    height: 100vh;
+}
 
 nav {
     background: black;
@@ -53,7 +54,6 @@ nav {
         width: calc(100% - 32px);
         padding: 8px;
         cursor: pointer;
-        // text-decoration: none;
     }
 }
 
@@ -103,10 +103,13 @@ nav {
             }   
         }
     }
-    &.active {
-        display: block;
-        box-shadow: 0 0 16px black;
-    }
+    // &.active {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     display: block;
+    //     box-shadow: 0 0 16px black;
+    // }
     > img {
         height: 300px;
         object-fit: cover;    

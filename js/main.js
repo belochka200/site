@@ -6,43 +6,6 @@ const closeNavBtn = document.querySelector(".nav-button-close-menu")
 const nav = document.getElementsByTagName("nav")[0]
 const animationTime = 250
 
-closeAllInfoBlocks()
-
-// Функционал для экскурсии
-// document.querySelector('.map').addEventListener("click", () => {
-//   changeMenuVisible()
-// })
-
-navItems.forEach((navItem) => {
-  navItem.addEventListener("click", () => {
-    closeAllInfoBlocks()
-    changeMenuVisible()
-    infoBlocks.forEach((block) => {
-      if (block.getAttribute("id") === navItem.getAttribute("id")) {
-        navItem.classList.add("active")
-        nav.classList.remove("active")
-        navBtn.classList.remove("menu-active")
-        showBlock(block)
-      }
-    })
-  })
-})
-
-closeBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    unactiveAllMenuItems()
-    closeAllInfoBlocks()
-  })
-})
-
-navBtn.addEventListener("click", () => {
-  changeMenuVisible()
-})
-
-closeNavBtn.addEventListener("click", () => {
-  changeMenuVisible()
-})
-
 function unactiveAllMenuItems() {
   navItems.forEach((navItem) => {
     navItem.classList.remove("active")
@@ -62,6 +25,9 @@ function closeAllInfoBlocks() {
 function showBlock(block) {
   setTimeout(() => {
     block.style.display = "block"
+    block.style.position = 'absolute'
+    block.style.top = 0
+    block.style.left = 0
     setTimeout(() => {
       block.style.transform = "translateX(0)"
     }, animationTime)
@@ -80,3 +46,44 @@ function changeMenuVisible() {
     closeNavBtn.classList.add("menu-active")
   }
 }
+
+window.addEventListener('load', () => {
+  // работа с картой
+  const svgObject = document.querySelector('object').contentDocument
+  svgObject.querySelectorAll('.area').forEach((item) => {
+    console.log(item)
+  })
+  // console.log(svgObject.querySelector('.area-1'))
+
+  closeAllInfoBlocks()
+
+  navItems.forEach((navItem) => {
+    navItem.addEventListener("click", () => {
+      closeAllInfoBlocks()
+      changeMenuVisible()
+      infoBlocks.forEach((block) => {
+        if (block.getAttribute("id") === navItem.getAttribute("id")) {
+          navItem.classList.add("active")
+          nav.classList.remove("active")
+          navBtn.classList.remove("menu-active")
+          showBlock(block)
+        }
+      })
+    })
+  })
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      unactiveAllMenuItems()
+      closeAllInfoBlocks()
+    })
+  })
+
+  navBtn.addEventListener("click", () => {
+    changeMenuVisible()
+  })
+
+  closeNavBtn.addEventListener("click", () => {
+    changeMenuVisible()
+  })
+})

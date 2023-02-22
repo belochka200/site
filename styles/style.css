@@ -3,6 +3,16 @@
   font-family: "JetBrains Mono";
 }
 
+body {
+  overflow: hidden;
+  background: #525452;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+}
+
 nav {
   background: black;
   min-width: 20%;
@@ -92,10 +102,6 @@ nav .excursion-button {
   height: 4px;
   width: 36px;
   transform: rotate(90deg);
-}
-.info.active {
-  display: block;
-  box-shadow: 0 0 16px black;
 }
 .info > img {
   height: 300px;
