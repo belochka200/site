@@ -87,6 +87,8 @@ window.addEventListener('load', () => {
   closeAllInfoBlocks()
 
   navigationItems.forEach((navItem) => {
+    const svgObject = document.querySelector('object').contentDocument
+    const areas = svgObject.querySelectorAll('.area')
     navItem.addEventListener('click', () => {
       closeAllInfoBlocks()
       changeMenuVisible()
@@ -96,6 +98,11 @@ window.addEventListener('load', () => {
           navBar.classList.remove('active')
           navigationButtons.classList.remove('menu-active')
           showBlock(block.getAttribute('id'))
+        }
+      })
+      areas.forEach((area) => {
+        if (area.getAttribute('id') === navItem.getAttribute('id')) {
+          area.classList.add('active')
         }
       })
     })

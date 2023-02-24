@@ -20,7 +20,7 @@
             transition: all .25s ease-in-out;
         }
         .area:hover {
-            fill: white;
+            fill: red;
             cursor: pointer;
         }
         .area.active {
