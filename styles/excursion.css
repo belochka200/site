@@ -41,6 +41,7 @@ a {
   justify-content: center;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .button.to-map {
   width: auto;
   background: rgba(255, 255, 255, 0.1);
@@ -49,6 +50,8 @@ a {
   left: 16px;
   top: 16px;
 }
+=======
+>>>>>>> 0106ebecd1bf8cf2205be5b543bc00aa99b01062
 
 .slider {
   display: flex;
@@ -119,6 +122,7 @@ img:hover {
 }
 section.start-excursion {
   height: 100vh;
+<<<<<<< HEAD
 }
 
 .card {
@@ -131,4 +135,6 @@ section.start-excursion {
   height: 250px;
   margin: 0;
   padding: 0;
+=======
+>>>>>>> 0106ebecd1bf8cf2205be5b543bc00aa99b01062
 }/*# sourceMappingURL=excursion.css.map */
