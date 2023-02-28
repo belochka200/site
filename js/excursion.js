@@ -8,13 +8,13 @@ window.addEventListener('load', () => {
   backgroundAudio.autoplay = true
   backgroundAudio.loop = true
   startButton.addEventListener('click', () => {
-    playExcursion('.block1', '../audio/1.mp3', 139)
+    playExcursion('.block1', '../audio/1.mp3', 9)
   })
   document.querySelector('.button2').addEventListener('click', () => {
     playExcursion('.block2', '../audio/Пункт 2 целиком.m4a', 92)
   })
   document.querySelector('.button3').addEventListener('click', () => {
-    playExcursion('.block3', '../audio/reichkom.mp3', 10) // 404
+    playExcursion('.block3', '../audio/reichkom.mp3', 404) // 404
   })
   document.querySelector('.button4').addEventListener('click', () => {
     playExcursion('.block4', '../audio/Пункт 4.m4a', 64)
@@ -31,7 +31,7 @@ function playExcursion(id, srcAudio, audioTime) {
   const heightStart =
     document.querySelector(id).offsetHeight - window.innerHeight + 32 + 56
   const heightEnd =
-    window.scrollY + document.querySelector(id).offsetHeight + 32
+    window.scrollY + document.querySelector(id).offsetHeight + 32 + 16
   const anim = [
     { transform: 'translateY(0%)' },
     {
