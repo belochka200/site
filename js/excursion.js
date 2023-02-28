@@ -3,7 +3,8 @@ const audio = new Audio()
 window.addEventListener('load', () => {
   const startButton = document.querySelector('.button-start')
   const backgroundAudio = new Audio()
-  backgroundAudio.src = '../audio/backgroundmusic.mp3'
+  backgroundAudio.src =
+    'https://belochka200.github.io/site/audio/backgroundmusic.mp3'
   backgroundAudio.volume = 0.333
   backgroundAudio.autoplay = true
   backgroundAudio.loop = true
