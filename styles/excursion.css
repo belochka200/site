@@ -178,5 +178,8 @@ section.start-excursion h1 {
 }
 
 .card {
-  display: inline-flex;
+  display: inline-block;
+}
+.card img {
+  width: 100%;
 }/*# sourceMappingURL=excursion.css.map */
