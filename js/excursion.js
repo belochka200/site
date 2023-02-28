@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
   backgroundAudio.autoplay = true
   backgroundAudio.loop = true
   startButton.addEventListener('click', () => {
-    playExcursion('.block1', '../audio/1.mp3', 9)
+    playExcursion('.block1', '../audio/1.mp3', 139)
   })
   document.querySelector('.button2').addEventListener('click', () => {
     playExcursion('.block2', '../audio/Пункт 2 целиком.m4a', 92)
