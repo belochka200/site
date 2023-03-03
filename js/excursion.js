@@ -11,35 +11,35 @@ window.addEventListener('load', () => {
   startButton.addEventListener('click', () => {
     playExcursion(
       '.block1',
-      'https://belochka200.github.io/site/audio/audio/1.mp3',
+      'https://belochka200.github.io/site/audio/1.mp3',
       139
     )
   })
   document.querySelector('.button2').addEventListener('click', () => {
     playExcursion(
       '.block2',
-      'https://belochka200.github.io/site/audio/audio/Пункт 2 целиком.m4a',
+      'https://belochka200.github.io/site/audio/Пункт 2 целиком.m4a',
       92
     )
   })
   document.querySelector('.button3').addEventListener('click', () => {
     playExcursion(
       '.block3',
-      'https://belochka200.github.io/site/audio/audio/reichkom.mp3',
+      'https://belochka200.github.io/site/audio/reichkom.mp3',
       404
     ) // 404
   })
   document.querySelector('.button4').addEventListener('click', () => {
     playExcursion(
       '.block4',
-      'https://belochka200.github.io/site/audio/audio/Пункт 4.m4a',
+      'https://belochka200.github.io/site/audio/Пункт 4.m4a',
       64
     )
   })
   document.querySelector('.button5').addEventListener('click', () => {
     playExcursion(
       '.block5',
-      'https://belochka200.github.io/site/audio/audio/Пункт 5.mp3',
+      'https://belochka200.github.io/site/audio/Пункт 5.mp3',
       141
     )
   })
