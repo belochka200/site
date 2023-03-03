@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
   const backgroundAudio = new Audio()
   backgroundAudio.src =
     'https://belochka200.github.io/site/audio/backgroundmusic.mp3'
-  backgroundAudio.volume = 0.333
+  backgroundAudio.volume = 0.2
   backgroundAudio.autoplay = true
   backgroundAudio.loop = true
   startButton.addEventListener('click', () => {
