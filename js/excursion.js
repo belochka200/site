@@ -9,19 +9,39 @@ window.addEventListener('load', () => {
   backgroundAudio.autoplay = true
   backgroundAudio.loop = true
   startButton.addEventListener('click', () => {
-    playExcursion('.block1', '../audio/1.mp3', 139)
+    playExcursion(
+      '.block1',
+      'https://belochka200.github.io/site/audio/audio/1.mp3',
+      139
+    )
   })
   document.querySelector('.button2').addEventListener('click', () => {
-    playExcursion('.block2', '../audio/Пункт 2 целиком.m4a', 92)
+    playExcursion(
+      '.block2',
+      'https://belochka200.github.io/site/audio/audio/Пункт 2 целиком.m4a',
+      92
+    )
   })
   document.querySelector('.button3').addEventListener('click', () => {
-    playExcursion('.block3', '../audio/reichkom.mp3', 404) // 404
+    playExcursion(
+      '.block3',
+      'https://belochka200.github.io/site/audio/audio/reichkom.mp3',
+      404
+    ) // 404
   })
   document.querySelector('.button4').addEventListener('click', () => {
-    playExcursion('.block4', '../audio/Пункт 4.m4a', 64)
+    playExcursion(
+      '.block4',
+      'https://belochka200.github.io/site/audio/audio/Пункт 4.m4a',
+      64
+    )
   })
   document.querySelector('.button5').addEventListener('click', () => {
-    playExcursion('.block5', '../audio/Пункт 5.mp3', 141)
+    playExcursion(
+      '.block5',
+      'https://belochka200.github.io/site/audio/audio/Пункт 5.mp3',
+      141
+    )
   })
 })
 
