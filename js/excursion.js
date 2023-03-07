@@ -1,13 +1,13 @@
 const audio = new Audio()
+const backgroundAudio = new Audio()
+backgroundAudio.src =
+  'https://belochka200.github.io/site/audio/backgroundmusic.mp3'
+backgroundAudio.volume = 0.2
+backgroundAudio.autoplay = true
+backgroundAudio.loop = true
 
 window.addEventListener('load', () => {
   const startButton = document.querySelector('.button-start')
-  const backgroundAudio = new Audio()
-  backgroundAudio.src =
-    'https://belochka200.github.io/site/audio/backgroundmusic.mp3'
-  backgroundAudio.volume = 0.2
-  backgroundAudio.autoplay = true
-  backgroundAudio.loop = true
   startButton.addEventListener('click', () => {
     playExcursion(
       '.block1',
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
       '.block3',
       'https://belochka200.github.io/site/audio/reichkom.mp3',
       404
-    ) // 404
+    )
   })
   document.querySelector('.button4').addEventListener('click', () => {
     playExcursion(

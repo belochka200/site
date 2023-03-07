@@ -8,9 +8,22 @@ const closeNavigationMenuButton = document.querySelector(
   '.nav-button-close-menu'
 )
 const navBar = document.getElementsByTagName('nav')[0]
+const audio = new Audio()
+
+const audioList = {
+  1: 'https://belochka200.github.io/site/audio/Остленд.m4a',
+  2: 'https://belochka200.github.io/site/audio/Украина.m4a',
+  3: 'https://belochka200.github.io/site/audio/Дон волга.m4a',
+  4: 'https://belochka200.github.io/site/audio/Кавказ.m4a',
+  5: 'https://belochka200.github.io/site/audio/Туркестан.m4a',
+  6: 'https://belochka200.github.io/site/audio/Урал.m4a',
+  7: 'https://belochka200.github.io/site/audio/Москгвия.m4a',
+}
 
 // Убирает актив со всех пунктов меню
 function unactiveAllMenuItems() {
+  audio.play = false
+  audio.src = ''
   navigationItems.forEach((navItem) => {
     navItem.classList.remove('active')
   })
@@ -19,6 +32,10 @@ function unactiveAllMenuItems() {
 // Закрывает все блоки информации
 function closeAllInfoBlocks() {
   unactiveAllMenuItems()
+  audio.play = false
+  audio.autoplay = false
+  audio.src = ''
+
   const svgObject = document.querySelector('object').contentDocument
   const areas = svgObject.querySelectorAll('.area')
   areas.forEach((area) => {
@@ -39,6 +56,8 @@ function showBlock(id) {
   setTimeout(() => {
     infoBlocks.forEach((block) => {
       if (block.getAttribute('id') === id) {
+        audio.src = audioList[Number(block.getAttribute('id'))]
+        audio.autoplay = true
         block.style.display = 'block'
         block.style.position = 'absolute'
         block.style.top = 0
