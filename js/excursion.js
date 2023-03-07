@@ -7,6 +7,49 @@ backgroundAudio.autoplay = true
 backgroundAudio.loop = true
 
 window.addEventListener('load', () => {
+  const buttonsListen = document.querySelectorAll('.button.button-listen')
+  buttonsListen.forEach((button) => {
+    button.addEventListener('click', () => {
+      switch (Number(button.getAttribute('id'))) {
+        case 1:
+          playExcursion(
+            '.block1',
+            'https://belochka200.github.io/site/audio/1.mp3',
+            139
+          )
+          break
+        case 2:
+          playExcursion(
+            '.block2',
+            'https://belochka200.github.io/site/audio/Пункт 2 целиком.m4a',
+            92
+          )
+          break
+        case 3:
+          playExcursion(
+            '.block3',
+            'https://belochka200.github.io/site/audio/reichkom.mp3',
+            404
+          )
+          break
+        case 4:
+          playExcursion(
+            '.block4',
+            'https://belochka200.github.io/site/audio/Пункт 4.m4a',
+            64
+          )
+          break
+        case 5:
+          playExcursion(
+            '.block5',
+            'https://belochka200.github.io/site/audio/Пункт 5.mp3',
+            141
+          )
+          break
+      }
+    })
+  })
+  console.log(buttonsListen)
   const startButton = document.querySelector('.button-start')
   startButton.addEventListener('click', () => {
     playExcursion(

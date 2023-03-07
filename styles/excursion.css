@@ -182,4 +182,11 @@ section.start-excursion h1 {
 }
 .card img {
   width: 100%;
+}
+
+.button-listen {
+  margin-bottom: 12px;
+  transform: translateY(-36px);
+  padding: 8px;
+  width: 25%;
 }/*# sourceMappingURL=excursion.css.map */

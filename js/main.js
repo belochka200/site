@@ -9,6 +9,7 @@ const closeNavigationMenuButton = document.querySelector(
 )
 const navBar = document.getElementsByTagName('nav')[0]
 const audio = new Audio()
+audio.volume = 0.7
 
 const audioList = {
   1: 'https://belochka200.github.io/site/audio/Остленд.m4a',
