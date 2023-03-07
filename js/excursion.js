@@ -7,6 +7,7 @@ backgroundAudio.autoplay = true
 backgroundAudio.loop = true
 
 window.addEventListener('load', () => {
+  document.querySelector('.loader').classList.add('loaded')
   const buttonsListen = document.querySelectorAll('.button.button-listen')
   buttonsListen.forEach((button) => {
     button.addEventListener('click', () => {

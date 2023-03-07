@@ -186,3 +186,21 @@ section {
   padding: 8px;
   width: 25%;
 }
+
+.loader {
+  z-index: 66666;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  &.loaded {
+    z-index: -1;
+    position: block;
+    display: none;
+    transform: translateX(-100%);
+  }
+}
