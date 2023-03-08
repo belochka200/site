@@ -113,6 +113,12 @@ img {
   columns: 3;
 }
 
+@media only screen and (max-width: 1024px) {
+  .reich-wrap {
+    columns: 2;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .button {
     width: 100%;
@@ -145,7 +151,7 @@ img {
     }
   }
   .reich-wrap {
-    columns: 2;
+    columns: 1;
   }
 }
 
@@ -154,9 +160,6 @@ img {
     div {
       width: 100%;
     }
-  }
-  .reich-wrap {
-    columns: 1;
   }
 }
 
