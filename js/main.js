@@ -19,6 +19,7 @@ const audioList = {
   5: 'https://belochka200.github.io/site/audio/Туркестан.m4a',
   6: 'https://belochka200.github.io/site/audio/Урал.m4a',
   7: 'https://belochka200.github.io/site/audio/Москгвия.m4a',
+  8: 'https://belochka200.github.io/site/audio/Крым.m4a',
 }
 
 // Убирает актив со всех пунктов меню
